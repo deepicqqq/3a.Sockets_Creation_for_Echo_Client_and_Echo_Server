@@ -8,8 +8,9 @@ Sockets Links.
 3. Send message to the client and receive the message from the client using the Socket module in
  server .
 4. Send and receive the message using the send function in socket.
-## PROGRAM
-SERVER:
+## PROGRAM:
+### SERVER:
+```
 import socket
 
 HOST = '127.0.0.1'  
@@ -26,8 +27,10 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
             if not data:
                 break
             conn.sendall(data)
-CLIENT:
 
+```
+### CLIENT:
+```
 import socket
 
 HOST = '127.0.0.1'  
@@ -41,11 +44,13 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
         data = s.recv(1024)
         print('Received', repr(data.decode()))
 
-## OUPUT
-SERVER:
-![image](https://github.com/23004205/3a.Sockets_Creation_for_Echo_Client_and_Echo_Server/assets/138971114/88f230f0-c2e1-4d48-98f3-0e462ea11ae5)
-CLIENT:
-![image](https://github.com/23004205/3a.Sockets_Creation_for_Echo_Client_and_Echo_Server/assets/138971114/a4c717a5-3e1b-464c-bacd-858d08106ae5)
+```
+
+## OUTPUT:
+### SERVER : 
+![image](https://github.com/arbasil05/3a.Sockets_Creation_for_Echo_Client_and_Echo_Server/assets/144218037/21e8cf8f-c448-445a-a520-02462699f482)
+### CLIENT : 
+![image](https://github.com/arbasil05/3a.Sockets_Creation_for_Echo_Client_and_Echo_Server/assets/144218037/4f0dca11-0077-463c-80d3-eaf1922c1ac4)
 
 
 ## RESULT
